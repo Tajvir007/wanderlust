@@ -79,8 +79,7 @@ describe('Integration Test: Home Route', () => {
     expect(natureCategoryPill).toBeInTheDocument();
     await userEvent.click(natureCategoryPill);
     expect(await screen.findByText('Posts related to "Nature"')).toBeInTheDocument();
-    // Strange test got passed api response is 3 over local backend
-    expect(await screen.findAllByTestId('featuredPostCard')).toHaveLength(5);
+    expect(await screen.findAllByTestId('featuredPostCard')).toHaveLength(3);
   });
   test('Home Route: Verify navigation on post card click under Featured Posts section', async () => {
     //ARRANGE
